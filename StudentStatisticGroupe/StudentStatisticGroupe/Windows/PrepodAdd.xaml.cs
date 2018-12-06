@@ -1,5 +1,4 @@
-﻿using StudentStatisticGroupe.Windows;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,25 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace StudentStatisticGroupe
+namespace StudentStatisticGroupe.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для PrepodAdd.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PrepodAdd : Window
     {
-        public MainWindow()
+        public PrepodAdd()
         {
             InitializeComponent();
         }
 
-        private void BtnPrepod_Click(object sender, RoutedEventArgs e)
+        private void SetPrepod_Click(object sender, RoutedEventArgs e)
         {
-            Prepods prepods = new Prepods();
-            prepods.Show();
+
         }
     }
 }

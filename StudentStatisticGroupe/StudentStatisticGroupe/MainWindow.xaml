@@ -26,10 +26,10 @@
 
         <ComboBox Name="GroupeCombo" Grid.Column="2" Margin="25" Grid.ColumnSpan="2"/>
         <Button Name="btnPrepod" Grid.Column="0" Grid.Row="1" Margin="25" Content="Преподаватели" Click="BtnPrepod_Click"/>
-        <Button Name="btnStudent" Grid.Column="1" Grid.Row="1" Margin="25" Content="Студенты"/>
+        <Button Name="btnStudent" Grid.Column="1" Grid.Row="1" Margin="25" Content="Студенты" Click="BtnStudent_Click"/>
         <Button Name="btnDiscipines" Grid.Column="2" Grid.Row="1" Margin="25" Content="Дисциплины" Click="BtnDiscipines_Click"/>
         <Button Name="btnMarks" Grid.Column="3" Grid.Row="1" Margin="25" Content="Оценки"/>
-        <Button Name="btnGroups" Grid.Column="4" Grid.Row="1" Margin="25" Content="Группы"/>
+        <Button Name="btnGroups" Grid.Column="4" Grid.Row="1" Margin="25" Content="Группы" Click="BtnGroups_Click"/>
         <DataGrid Name="datagrid" Grid.Column="0" Grid.Row="3" Grid.RowSpan="3" Grid.ColumnSpan="6"/>
     </Grid>
 </Window>

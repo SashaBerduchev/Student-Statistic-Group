@@ -36,7 +36,18 @@ namespace StudentStatisticGroupe
         {
             Discipline discipline = new Discipline();
             discipline.Show();
-        } 
-                
+        }
+
+        private void BtnStudent_Click(object sender, RoutedEventArgs e)
+        {
+            Students students = new Students();
+            students.Show();
+        }
+
+        private void BtnGroups_Click(object sender, RoutedEventArgs e)
+        {
+            Groups groups = new Groups();
+            groups.Show();
+        }
     }
 }

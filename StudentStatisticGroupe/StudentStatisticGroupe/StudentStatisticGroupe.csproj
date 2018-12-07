@@ -76,6 +76,7 @@
     <Compile Include="Group.cs">
       <DependentUpon>StudentStatisticsEDM.tt</DependentUpon>
     </Compile>
+    <Compile Include="PartialClass\ParialGroupe.cs" />
     <Compile Include="PartialClass\PartialDiscipline.cs" />
     <Compile Include="PartialClass\PartialTeacher.cs" />
     <Compile Include="Point.cs">
@@ -114,11 +115,23 @@
     <Compile Include="Windows\DisciplineAdd.xaml.cs">
       <DependentUpon>DisciplineAdd.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\GroupeAdd.xaml.cs">
+      <DependentUpon>GroupeAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Groups.xaml.cs">
+      <DependentUpon>Groups.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\PrepodAdd.xaml.cs">
       <DependentUpon>PrepodAdd.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Prepods.xaml.cs">
       <DependentUpon>Prepods.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\StudentAdd.xaml.cs">
+      <DependentUpon>StudentAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Students.xaml.cs">
+      <DependentUpon>Students.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -140,11 +153,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\GroupeAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Groups.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\PrepodAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Prepods.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\StudentAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Students.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

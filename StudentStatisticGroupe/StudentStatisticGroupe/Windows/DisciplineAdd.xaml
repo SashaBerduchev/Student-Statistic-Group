@@ -1,0 +1,19 @@
+﻿<Window x:Class="StudentStatisticGroupe.Windows.DisciplineAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentStatisticGroupe.Windows"
+        mc:Ignorable="d"
+        Title="DisciplineAdd" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox Name="name" Grid.Row="0" Margin="20"/>
+        <TextBox Name="kafedra" Grid.Row="1" Margin="20"/>
+        <Button Name="setPrepod" Grid.Row="5" Margin="30" Content="Загрузить" Click="SetPrepod_Click"/>
+    </Grid>
+</Window>

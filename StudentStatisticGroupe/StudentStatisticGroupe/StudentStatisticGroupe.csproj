@@ -70,12 +70,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Discipline.cs">
+    <Compile Include="DisciplineSet.cs">
       <DependentUpon>StudentStatisticsEDM.tt</DependentUpon>
     </Compile>
     <Compile Include="Group.cs">
       <DependentUpon>StudentStatisticsEDM.tt</DependentUpon>
     </Compile>
+    <Compile Include="PartialClass\PartialDiscipline.cs" />
+    <Compile Include="PartialClass\PartialTeacher.cs" />
     <Compile Include="Point.cs">
       <DependentUpon>StudentStatisticsEDM.tt</DependentUpon>
     </Compile>
@@ -106,6 +108,12 @@
     <Compile Include="Type.cs">
       <DependentUpon>StudentStatisticsEDM.tt</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Discipline.xaml.cs">
+      <DependentUpon>Discipline.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DisciplineAdd.xaml.cs">
+      <DependentUpon>DisciplineAdd.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\PrepodAdd.xaml.cs">
       <DependentUpon>PrepodAdd.xaml</DependentUpon>
     </Compile>
@@ -124,6 +132,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\Discipline.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DisciplineAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\PrepodAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

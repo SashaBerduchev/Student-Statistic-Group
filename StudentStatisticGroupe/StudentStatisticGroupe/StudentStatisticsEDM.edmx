@@ -9,7 +9,7 @@
     <EntitySet Name="GroupSet" EntityType="StudentStatisticsEDM.Store.GroupSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="StudentSet" EntityType="StudentStatisticsEDM.Store.StudentSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="TeacherSet" EntityType="StudentStatisticsEDM.Store.TeacherSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="DisciplineSet" EntityType="StudentStatisticsEDM.Store.DisciplineSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DisciplineSetSet" EntityType="StudentStatisticsEDM.Store.DisciplineSetSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="StudentStatisticSet" EntityType="StudentStatisticsEDM.Store.StudentStatisticSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PointSet" EntityType="StudentStatisticsEDM.Store.PointSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="TypeSet" EntityType="StudentStatisticsEDM.Store.TypeSet" store:Type="Tables" Schema="dbo" />
@@ -43,14 +43,13 @@
     <Property Name="Discipline" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
-  <EntityType Name="DisciplineSet">
+  <EntityType Name="DisciplineSetSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Kafedra" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Teacher" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="StudentStatisticSet">
     <Key>
@@ -86,7 +85,7 @@
           <EntitySet Name="GroupSet" EntityType="StudentStatisticsEDM.Group" />
           <EntitySet Name="StudentSet" EntityType="StudentStatisticsEDM.Student" />
           <EntitySet Name="TeacherSet" EntityType="StudentStatisticsEDM.Teacher" />
-          <EntitySet Name="DisciplineSet" EntityType="StudentStatisticsEDM.Discipline" />
+          <EntitySet Name="DisciplineSetSet" EntityType="StudentStatisticsEDM.DisciplineSet" />
           <EntitySet Name="StudentStatisticSet" EntityType="StudentStatisticsEDM.StudentStatistic" />
           <EntitySet Name="PointSet" EntityType="StudentStatisticsEDM.Point" />
           <EntitySet Name="TypeSet" EntityType="StudentStatisticsEDM.Type" />
@@ -96,64 +95,63 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" />
-          <Property Name="Sername" Type="String" Nullable="false" />
-          <Property Name="Phone" Type="String" Nullable="false" />
-          <Property Name="Groupe" Type="String" Nullable="false" />
-          <Property Name="Address" Type="String" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Sername" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Groupe" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="Teacher">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" />
-          <Property Name="Sername" Type="String" Nullable="false" />
-          <Property Name="Phone" Type="String" Nullable="false" />
-          <Property Name="Discipline" Type="String" Nullable="false" />
-          <Property Name="Address" Type="String" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Sername" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Discipline" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
-        <EntityType Name="Discipline">
+        <EntityType Name="DisciplineSet">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Kafedra" Type="String" Nullable="false" />
-          <Property Name="Name" Type="String" Nullable="false" />
-          <Property Name="Teacher" Type="String" Nullable="false" />
+          <Property Name="Kafedra" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="StudentStatistic">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Data" Type="String" Nullable="false" />
-          <Property Name="Type" Type="String" Nullable="false" />
-          <Property Name="NameStudent" Type="String" Nullable="false" />
-          <Property Name="NameTeacher" Type="String" Nullable="false" />
-          <Property Name="Point" Type="String" Nullable="false" />
-          <Property Name="Comment" Type="String" Nullable="false" />
+          <Property Name="Data" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="NameStudent" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="NameTeacher" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Point" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Comment" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="Point">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Num" Type="String" Nullable="false" />
+          <Property Name="Num" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="Type">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NameType" Type="String" Nullable="false" />
+          <Property Name="NameType" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -193,13 +191,12 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DisciplineSet">
-      <EntityTypeMapping TypeName="IsTypeOf(StudentStatisticsEDM.Discipline)">
-        <MappingFragment StoreEntitySet="DisciplineSet">
+    <EntitySetMapping Name="DisciplineSetSet">
+      <EntityTypeMapping TypeName="IsTypeOf(StudentStatisticsEDM.DisciplineSet)">
+        <MappingFragment StoreEntitySet="DisciplineSetSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Kafedra" ColumnName="Kafedra" />
           <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Teacher" ColumnName="Teacher" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -248,6 +245,7 @@
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
         <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->

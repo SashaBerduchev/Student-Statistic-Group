@@ -28,7 +28,7 @@ namespace StudentStatisticGroupe
         public virtual DbSet<Group> GroupSet { get; set; }
         public virtual DbSet<Student> StudentSet { get; set; }
         public virtual DbSet<Teacher> TeacherSet { get; set; }
-        public virtual DbSet<Discipline> DisciplineSet { get; set; }
+        public virtual DbSet<DisciplineSet> DisciplineSetSet { get; set; }
         public virtual DbSet<StudentStatistic> StudentStatisticSet { get; set; }
         public virtual DbSet<Point> PointSet { get; set; }
         public virtual DbSet<Type> TypeSet { get; set; }

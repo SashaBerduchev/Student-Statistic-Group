@@ -12,11 +12,10 @@ namespace StudentStatisticGroupe
     using System;
     using System.Collections.Generic;
     
-    public partial class Discipline
+    public partial class DisciplineSet
     {
         public int Id { get; set; }
         public string Kafedra { get; set; }
         public string Name { get; set; }
-        public string Teacher { get; set; }
     }
 }

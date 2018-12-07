@@ -2,13 +2,13 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 12/06/2018 13:25:07
--- Generated from EDMX file: D:\Student Statistic Group\StudentStatisticGroupe\StudentStatisticGroupe\StudentStatisticsEDM.edmx
+-- Date Created: 12/07/2018 08:06:59
+-- Generated from EDMX file: D:\Project\WCF\StudentStatisticGroup\StudentStatisticGroupe\StudentStatisticGroupe\StudentStatisticsEDM.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [StudentStatistics];
+USE [StudentGroupe];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -22,6 +22,27 @@ GO
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[GroupSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[GroupSet];
+GO
+IF OBJECT_ID(N'[dbo].[StudentSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[StudentSet];
+GO
+IF OBJECT_ID(N'[dbo].[TeacherSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TeacherSet];
+GO
+IF OBJECT_ID(N'[dbo].[DisciplineSetSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[DisciplineSetSet];
+GO
+IF OBJECT_ID(N'[dbo].[StudentStatisticSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[StudentStatisticSet];
+GO
+IF OBJECT_ID(N'[dbo].[PointSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PointSet];
+GO
+IF OBJECT_ID(N'[dbo].[TypeSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TypeSet];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -56,12 +77,11 @@ CREATE TABLE [dbo].[TeacherSet] (
 );
 GO
 
--- Creating table 'DisciplineSet'
-CREATE TABLE [dbo].[DisciplineSet] (
+-- Creating table 'DisciplineSetSet'
+CREATE TABLE [dbo].[DisciplineSetSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Kafedra] nvarchar(max)  NOT NULL,
-    [Name] nvarchar(max)  NOT NULL,
-    [Teacher] nvarchar(max)  NOT NULL
+    [Name] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -113,9 +133,9 @@ ADD CONSTRAINT [PK_TeacherSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [Id] in table 'DisciplineSet'
-ALTER TABLE [dbo].[DisciplineSet]
-ADD CONSTRAINT [PK_DisciplineSet]
+-- Creating primary key on [Id] in table 'DisciplineSetSet'
+ALTER TABLE [dbo].[DisciplineSetSet]
+ADD CONSTRAINT [PK_DisciplineSetSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 

@@ -15,27 +15,27 @@ using System.Windows.Shapes;
 namespace StudentStatisticGroupe.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для Prepods.xaml
+    /// Логика взаимодействия для Discipline.xaml
     /// </summary>
-    public partial class Prepods : Window
+    public partial class Discipline : Window
     {
-        public Prepods()
+        public Discipline()
         {
             InitializeComponent();
         }
 
         private void AddPrepod_Click(object sender, RoutedEventArgs e)
         {
-            PrepodAdd prepodAdd = new PrepodAdd();
-            prepodAdd.Show();
+            DisciplineAdd disciplineAdd = new DisciplineAdd();
+            disciplineAdd.Show();
         }
 
         private void LoadPrepod_Click(object sender, RoutedEventArgs e)
         {
-            List<Teacher> teachers;
+            List<DisciplineSet> disciplines;
             StudentStatisticsEDMContainer studentStatisticsEDMContainer = new StudentStatisticsEDMContainer();
-            teachers = studentStatisticsEDMContainer.TeacherSet.ToList();
-            DataGrid.ItemsSource = teachers.Select(x => new { x.Name, x.Sername, x.Phone, x.Discipline, x.Address });
+            disciplines = studentStatisticsEDMContainer.DisciplineSetSet.ToList();
+            DataGrid.ItemsSource = disciplines.Select(x => new { x.Name, x.Kafedra });
             
         }
     }

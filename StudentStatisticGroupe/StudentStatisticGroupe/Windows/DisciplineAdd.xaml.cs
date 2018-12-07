@@ -15,31 +15,24 @@ using System.Windows.Shapes;
 namespace StudentStatisticGroupe.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для PrepodAdd.xaml
+    /// Логика взаимодействия для DisciplineAdd.xaml
     /// </summary>
-    public partial class PrepodAdd : Window
+    public partial class DisciplineAdd : Window
     {
-        public PrepodAdd()
+        public DisciplineAdd()
         {
             InitializeComponent();
-            List<DisciplineSet> disciplines;
-            StudentStatisticsEDMContainer studentStatisticsEDMContainer = new StudentStatisticsEDMContainer();
-            disciplines = studentStatisticsEDMContainer.DisciplineSetSet.ToList();
-            discipline.ItemsSource = disciplines.Select(x => new { x.Name, x.Kafedra });
         }
 
         private void SetPrepod_Click(object sender, RoutedEventArgs e)
         {
             StudentStatisticsEDMContainer studentStatisticsEDMContainer = new StudentStatisticsEDMContainer();
-            var prepod = new Teacher
+            var descipline = new DisciplineSet
             {
-                Address = adress.Text,
-                Discipline = discipline.SelectedItem.ToString(),
                 Name = name.Text,
-                Phone = phone.Text,
-                Sername = sename.Text
+                Kafedra = kafedra.Text
             };
-            studentStatisticsEDMContainer.TeacherSet.Add(prepod);
+            studentStatisticsEDMContainer.DisciplineSetSet.Add(descipline);
             studentStatisticsEDMContainer.SaveChanges();
 
         }

@@ -31,5 +31,12 @@ namespace StudentStatisticGroupe
             Prepods prepods = new Prepods();
             prepods.Show();
         }
+
+        private void BtnDiscipines_Click(object sender, RoutedEventArgs e)
+        {
+            Discipline discipline = new Discipline();
+            discipline.Show();
+        } 
+                
     }
 }

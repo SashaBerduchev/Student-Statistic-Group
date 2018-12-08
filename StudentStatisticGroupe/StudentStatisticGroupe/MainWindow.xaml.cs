@@ -24,6 +24,11 @@ namespace StudentStatisticGroupe
         public MainWindow()
         {
             InitializeComponent();
+            List<Group> groups;
+            StudentStatisticsEDMContainer studentStatisticsEDMContainer = new StudentStatisticsEDMContainer();
+            groups = studentStatisticsEDMContainer.GroupSet.ToList();
+            GroupeCombo.ItemsSource = groups.Select(x => new { x.Name });
+
         }
 
         private void BtnPrepod_Click(object sender, RoutedEventArgs e)

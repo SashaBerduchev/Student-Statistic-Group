@@ -76,6 +76,7 @@
     <Compile Include="Group.cs">
       <DependentUpon>StudentStatisticsEDM.tt</DependentUpon>
     </Compile>
+    <Compile Include="PartialClass\LisyStudStat.cs" />
     <Compile Include="PartialClass\ParialGroupe.cs" />
     <Compile Include="PartialClass\PartialDiscipline.cs" />
     <Compile Include="PartialClass\PartialTeacher.cs" />
@@ -84,6 +85,9 @@
     </Compile>
     <Compile Include="Student.cs">
       <DependentUpon>StudentStatisticsEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentInformation.xaml.cs">
+      <DependentUpon>StudentInformation.xaml</DependentUpon>
     </Compile>
     <Compile Include="StudentStatistic.cs">
       <DependentUpon>StudentStatisticsEDM.tt</DependentUpon>
@@ -133,6 +137,12 @@
     <Compile Include="Windows\Students.xaml.cs">
       <DependentUpon>Students.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\StudInfo.xaml.cs">
+      <DependentUpon>StudInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Types.xaml.cs">
+      <DependentUpon>Types.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -145,6 +155,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="StudentInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Discipline.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -174,6 +188,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Students.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\StudInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Types.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

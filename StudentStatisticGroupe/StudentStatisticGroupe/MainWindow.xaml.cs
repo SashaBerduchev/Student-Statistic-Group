@@ -54,5 +54,23 @@ namespace StudentStatisticGroupe
             Groups groups = new Groups();
             groups.Show();
         }
+
+        private void BtnStudentInfo_Click(object sender, RoutedEventArgs e)
+        {
+            StudInfo studInfo = new StudInfo();
+            studInfo.Show();
+        }
+
+        private void BtnStudenSetData_Click(object sender, RoutedEventArgs e)
+        {
+            StudentInformation studentInformation = new StudentInformation();
+            studentInformation.Show();
+        }
+
+        private void BtnType_Click(object sender, RoutedEventArgs e)
+        {
+            Types types = new Types();
+            types.Show();
+        }
     }
 }

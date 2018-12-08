@@ -22,10 +22,25 @@ namespace StudentStatisticGroupe.Windows
         public StudentAdd()
         {
             InitializeComponent();
+            List<Group> groups;
+            StudentStatisticsEDMContainer studentStatisticsEDMContainer = new StudentStatisticsEDMContainer();
+            groups = studentStatisticsEDMContainer.GroupSet.ToList();
+            Groupe.ItemsSource = groups.Select(x => new { x.Name });
         }
 
         private void CtnSet_Click(object sender, RoutedEventArgs e)
         {
+            StudentStatisticsEDMContainer studentStatisticsEDMContainer = new StudentStatisticsEDMContainer();
+            var student = new Student
+            {
+                Name = Name.Text,
+                Address = Address.Text,
+                Phone = Phone.Text,
+                Groupe = Groupe.SelectedItem.ToString(),
+                Sername = Serame.Text
+            };
+            studentStatisticsEDMContainer.StudentSet.Add(student);
+            studentStatisticsEDMContainer.SaveChanges();
 
         }
     }

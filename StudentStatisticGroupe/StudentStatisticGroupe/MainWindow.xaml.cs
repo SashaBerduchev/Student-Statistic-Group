@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,9 +22,14 @@ namespace StudentStatisticGroupe
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        IContract contract;
         public MainWindow()
         {
             InitializeComponent();
+
+      
+
             List<Group> groups;
             StudentStatisticsEDMContainer studentStatisticsEDMContainer = new StudentStatisticsEDMContainer();
             groups = studentStatisticsEDMContainer.GroupSet.ToList();
@@ -63,14 +69,22 @@ namespace StudentStatisticGroupe
 
         private void BtnStudenSetData_Click(object sender, RoutedEventArgs e)
         {
-            StudentInformation studentInformation = new StudentInformation();
-            studentInformation.Show();
+            List<StudentStatistic> statistics;
+            StudentStatisticsEDMContainer studentStatisticsEDMContainer = new StudentStatisticsEDMContainer();
+            statistics = studentStatisticsEDMContainer.StudentStatisticSet.ToList();
+            datagrid.ItemsSource = statistics.Select(x => new { x.Data, x.Type, x.NameStudent, x.NameTeacher, x.Point, x.Comment });
         }
 
         private void BtnType_Click(object sender, RoutedEventArgs e)
         {
             Types types = new Types();
             types.Show();
+        }
+
+        private void BtnMarks_Click(object sender, RoutedEventArgs e)
+        {
+            PointsAdd pointsAdd = new PointsAdd();
+            pointsAdd.Show();
         }
     }
 }

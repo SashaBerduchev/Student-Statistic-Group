@@ -16,5 +16,10 @@ namespace StudentStatisticGroupe
     {
         public int Id { get; set; }
         public string NameType { get; set; }
+
+        public static implicit operator Type(System.Type v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

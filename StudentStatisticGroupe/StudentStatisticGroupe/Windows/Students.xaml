@@ -21,7 +21,7 @@
         </Grid.RowDefinitions>
 
         <Button Name="StudentsAdd" Grid.Column="0" Grid.Row="0" Margin="30" Content="Карточка студента" Click="StudentsAdd_Click"/>
-        <Button Name="Load" Grid.Column="1" Grid.Row="0" Margin="30" Content="Загрузить"/>
+        <Button Name="Load" Grid.Column="1" Grid.Row="0" Margin="30" Content="Загрузить" Click="Load_Click"/>
         <DataGrid Name="datagrid" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="2"/>
 
 

@@ -22,6 +22,21 @@ namespace StudentStatisticGroupe.Windows
         public StudInfo()
         {
             InitializeComponent();
+
+            StudentStatisticsEDMContainer studentStatisticsEDMContainer = new StudentStatisticsEDMContainer();
+            List<Type> types;
+            types = studentStatisticsEDMContainer.TypeSet.ToList();
+            Type.ItemsSource = types.Select(x => new { x.NameType});
+            List<Student> students;
+            students = studentStatisticsEDMContainer.StudentSet.ToList();
+            NameStudent.ItemsSource = students.Select(x => new { x.Name });
+            List<Teacher> teachers;
+            teachers = studentStatisticsEDMContainer.TeacherSet.ToList();
+            NameTeacher.ItemsSource = teachers.Select(x => new { x.Name });
+            List<Point> points;
+            points = studentStatisticsEDMContainer.PointSet.ToList();
+            Points.ItemsSource = points.Select(x => new { x.Num });
+           
         }
 
         private void Set_Click(object sender, RoutedEventArgs e)

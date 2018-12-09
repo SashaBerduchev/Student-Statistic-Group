@@ -22,7 +22,7 @@
         <ComboBox Name="NameTeacher" Grid.Row="3" Margin="10"/>
         <ComboBox Name="Points" Grid.Row="4" Margin="10"/>
         <TextBox Name="Comment" Grid.Row="5" Margin="10"/>
-        <Button Name="set" Grid.Row="6" Margin="10" Content="Cj[hfybnm" Click="Set_Click"/>
+        <Button Name="set" Grid.Row="6" Margin="10" Content="Сохранить" Click="Set_Click"/>
 
     </Grid>
 </Window>

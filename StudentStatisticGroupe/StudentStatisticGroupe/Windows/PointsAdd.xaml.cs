@@ -12,24 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace StudentStatisticGroupe
+namespace StudentStatisticGroupe.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для StudentInformation.xaml
+    /// Логика взаимодействия для PointsAdd.xaml
     /// </summary>
-    public partial class StudentInformation : Window
+    public partial class PointsAdd : Window
     {
-        public StudentInformation()
+        public PointsAdd()
         {
             InitializeComponent();
         }
 
-        private void Load_Click(object sender, RoutedEventArgs e)
+        private void BtnSet_Click(object sender, RoutedEventArgs e)
         {
-            List<StudentStatistic> statistics;
             StudentStatisticsEDMContainer studentStatisticsEDMContainer = new StudentStatisticsEDMContainer();
-            statistics = studentStatisticsEDMContainer.StudentStatisticSet.ToList();
-            datagrid.ItemsSource = statistics.Select(x => new { x.Data, x.Type, x.NameStudent, x.NameTeacher, x.Point, x.Comment });
+            var pointset = new Point
+            {
+                Num = pointtext.Text
+            };
+            studentStatisticsEDMContainer.PointSet.Add(pointset);
+            studentStatisticsEDMContainer.SaveChanges();
         }
     }
 }

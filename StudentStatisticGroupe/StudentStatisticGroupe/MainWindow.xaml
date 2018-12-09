@@ -29,9 +29,9 @@
         <Button Name="btnPrepod" Grid.Column="0" Grid.Row="1" Margin="25" Content="Преподаватели" Click="BtnPrepod_Click"/>
         <Button Name="btnStudent" Grid.Column="1" Grid.Row="1" Margin="25" Content="Студенты" Click="BtnStudent_Click"/>
         <Button Name="btnDiscipines" Grid.Column="2" Grid.Row="1" Margin="25" Content="Дисциплины" Click="BtnDiscipines_Click"/>
-        <Button Name="btnMarks" Grid.Column="3" Grid.Row="1" Margin="25" Content="Оценки"/>
+        <Button Name="btnMarks" Grid.Column="3" Grid.Row="1" Margin="25" Content="Оценки" Click="BtnMarks_Click"/>
         <Button Name="btnGroups" Grid.Column="4" Grid.Row="1" Margin="25" Content="Группы" Click="BtnGroups_Click"/>
-        <DataGrid Name="datagrid" Grid.Column="0" Grid.Row="3" Grid.RowSpan="3" Grid.ColumnSpan="6"/>
+        <DataGrid Name="datagrid" Grid.Column="0" Grid.Row="3" Grid.RowSpan="3" Grid.ColumnSpan="6" />
         <Button x:Name="btnStudentInfo" Grid.Column="5" Grid.Row="1" Margin="0,25" Content="Информация о работе студента" Click="BtnStudentInfo_Click"/>
         <Button x:Name="btnType" Grid.Column="6" Grid.Row="1" Margin="0,25" Content="Тип здачи" Click="BtnType_Click" />
         <Button x:Name="btnStudenSetData" Grid.Column="2" Grid.Row="2" Margin="25,25,10,10" Content="Заполнение информации студента"  Grid.ColumnSpan="2" Click="BtnStudenSetData_Click"/>

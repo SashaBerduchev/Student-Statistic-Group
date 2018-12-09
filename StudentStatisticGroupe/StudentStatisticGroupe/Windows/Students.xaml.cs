@@ -29,5 +29,13 @@ namespace StudentStatisticGroupe.Windows
             StudentAdd studentAdd = new StudentAdd();
             studentAdd.Show();
         }
+
+        private void Load_Click(object sender, RoutedEventArgs e)
+        {
+            StudentStatisticsEDMContainer studentStatisticsEDMContainer = new StudentStatisticsEDMContainer();
+            List<Student> students;
+            students = studentStatisticsEDMContainer.StudentSet.ToList();
+            datagrid.ItemsSource = students.Select(x => new { x.Name, x.Sername, x.Phone, x.Groupe, x.Address });
+        }
     }
 }

@@ -52,6 +52,7 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -76,18 +77,19 @@
     <Compile Include="Group.cs">
       <DependentUpon>StudentStatisticsEDM.tt</DependentUpon>
     </Compile>
+    <Compile Include="IContract.cs" />
     <Compile Include="PartialClass\LisyStudStat.cs" />
     <Compile Include="PartialClass\ParialGroupe.cs" />
     <Compile Include="PartialClass\PartialDiscipline.cs" />
+    <Compile Include="PartialClass\PartialList.cs" />
+    <Compile Include="PartialClass\PartialPoint.cs" />
+    <Compile Include="PartialClass\PartialStudents.cs" />
     <Compile Include="PartialClass\PartialTeacher.cs" />
     <Compile Include="Point.cs">
       <DependentUpon>StudentStatisticsEDM.tt</DependentUpon>
     </Compile>
     <Compile Include="Student.cs">
       <DependentUpon>StudentStatisticsEDM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StudentInformation.xaml.cs">
-      <DependentUpon>StudentInformation.xaml</DependentUpon>
     </Compile>
     <Compile Include="StudentStatistic.cs">
       <DependentUpon>StudentStatisticsEDM.tt</DependentUpon>
@@ -107,6 +109,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StudentStatisticsEDM.edmx</DependentUpon>
     </Compile>
+    <Compile Include="StudStatServise.cs" />
     <Compile Include="Teacher.cs">
       <DependentUpon>StudentStatisticsEDM.tt</DependentUpon>
     </Compile>
@@ -124,6 +127,9 @@
     </Compile>
     <Compile Include="Windows\Groups.xaml.cs">
       <DependentUpon>Groups.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PointsAdd.xaml.cs">
+      <DependentUpon>PointsAdd.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\PrepodAdd.xaml.cs">
       <DependentUpon>PrepodAdd.xaml</DependentUpon>
@@ -155,10 +161,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="StudentInformation.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Windows\Discipline.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -172,6 +174,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Groups.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PointsAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -32,6 +33,12 @@ namespace StudentStatisticGroupe.Windows
 
         private void Load_Click(object sender, RoutedEventArgs e)
         {
+            Thread thread = new Thread(SetData);
+        }
+
+        public void SetData()
+        {
+
             StudentStatisticsEDMContainer studentStatisticsEDMContainer = new StudentStatisticsEDMContainer();
             List<Student> students;
             students = studentStatisticsEDMContainer.StudentSet.ToList();
